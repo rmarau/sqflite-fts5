@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:7.1.2'
     }
 }
 
@@ -16,6 +16,7 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
 }
 
@@ -43,4 +44,6 @@ android {
 
 dependencies {
     testImplementation 'junit:junit:4.13.1'
+    implementation "androidx.sqlite:sqlite:2.2.0"
+    implementation 'com.github.requery:sqlite-android:3.36.0' //Versions 3.37.0 - 3.39.0 Fail on jitpack
 }
